@@ -1,0 +1,89 @@
+
+
+Itunes SearchAPI Test Plan
+
+
+negative test cases 
+===================
+
+
+term=empty string
+
+country=empty string
+
+media=empty string
+
+limit=0
+
+limit=-1
+
+limit=199
+
+limit=201
+
+limit=1000
+
+limit=err1001
+
+media=xyz
+
+media=0123
+
+country=usa
+
+country=#$%^@
+
+
+positive testing
+=================
+
+term=bruno+mars
+
+term=bruno+mars&media=podcast
+
+term=bruno+mars&media=music&country=us
+
+term=bruno+mars&media=musicVideo&country=de&limit=1
+
+term=bruno+mars&limit=200
+
+term=bruno+mars&media=movie&country=jp&limit=100
+
+term=bruno+mars&media=audiobook&country=fr&limit=50
+
+term=bruno+mars&media=shortfilm&country=uk&limit=150
+
+term=bruno+mars&media=tvShow&country=sg&limit=199
+
+term=bruno+mars&media=software&country=in
+
+term=bruno+mars&media=ebook&country=mx
+
+term=bruno+mars&media=all&limit=10
+
+
+Error responses
+================
+
+Verify that an error message is sent when parameter key values are not specified for each of the parameters.
+
+Verify that correct search results display if all the parameter key values are specified and are valid.
+
+Verify that correct search results display if only some of the parameter key values are specified and are valid
+
+Verify that an error message is displayed when an invalid country parameter key value is used.
+
+Verify that an error message is displayed when an invalid media parameter key value is used.
+
+Verify that an error message is displayed when an invalid term parameter key value is used.
+
+Verify that an error message is displayed when an invalid limit parameter key value is used.
+
+
+
+
+
+
+
+
+
